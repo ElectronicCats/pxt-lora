@@ -1,0 +1,19 @@
+{
+    "name": "lora",
+    "version": "0.1.0",
+    "description": "Library for Lora",
+    "license": "MIT",
+    "files": [
+      "README.md",
+      "lora.cpp",
+      "shims.d.ts",
+      "lora.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}
