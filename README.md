@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ElectronicCats/pxt-lora.svg?branch=master)](https://travis-ci.org/ElectronicCats/pxt-lora) 
+
 # LoRa
 
 Package adds support LoRa **(Status: alpha 2)**
