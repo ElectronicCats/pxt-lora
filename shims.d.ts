@@ -9,6 +9,13 @@ declare namespace lora {
     function beginPacket(): int32;
 
     /**
+     * Read Version
+     **/
+    //% parts="lora"
+    //% weight=45 blockGap=8 blockId="readVersion" block="readVersion" shim=lora::readVersion
+    function readVersion(): int32;
+
+    /**
      * End Packet to send
      **/
     //% parts="lora"
@@ -28,6 +35,20 @@ declare namespace lora {
     //% parts="lora"
     //% weight=45 blockGap=8 blockId="packetRssi" block="packetRssi" shim=lora::packetRssi
     function packetRssi(): int32;
+
+    /**
+     * Write Packet to send
+     **/
+    //% parts="lora"
+    //% weight=45 blockGap=8 blockId="write" block="Write Packet %int" shim=lora::write
+    function write(byte: uint8): void;
+
+    /**
+     * Write Packet to send
+     **/
+    //% parts="lora"
+    //% weight=45 blockGap=8 blockId="Send" block="Send %string" shim=lora::send
+    function send(a: string): uint8;
 
     /**
      * Available Packet

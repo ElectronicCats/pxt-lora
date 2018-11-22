@@ -20,6 +20,7 @@ namespace pxsim.lora {
     export function read(): number {  
         return 0      
     }
-    export function write(){       
+    export function send(): number{ 
+        return 0        
     }
 }

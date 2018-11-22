@@ -5,6 +5,8 @@
 #include "pxt.h"
 #include "SPI.h"
 #include "MbedSPI.h"
+#include <string>
+#include <stdlib.h> 
 
 // registers
 #define REG_FIFO                 0x00
@@ -111,7 +113,8 @@ namespace lora {
   void setLdoFlag();
 
   void write(int byte);
-  void writeRaw(const char *buffer, int size);
+  void writeRaw(const uint8_t *buffer, int size);
+  uint8_t Send(String);
 
   uint8_t readRegister(uint8_t address);
   void writeRegister(uint8_t address, uint8_t value);
@@ -412,19 +415,66 @@ long packetFrequencyError()
   return static_cast<long>(fError);
 }
 
+
 /**
 * Write Packet to send
 **/
 //% parts="lora"
-//% weight=45 blockGap=8 blockId="write" block="Write Packet %text"
-void write(String text)
+//% blockId="write" block="Write Packet %int" 
+//% weight=45 blockGap=8 block="Write Packet %int"
+void write(uint8_t byte)
 {
-  //return writeRaw(&byte, sizeof(byte));
-  if (NULL == text) return;
-  writeRaw(text->data, text->length);
+  writeRaw(&byte, sizeof(byte));
 }
 
-void writeRaw(const char *buffer, int size)
+/**
+* Write Packet to send
+**/
+//% parts="lora"
+//% blockId="Send" block="Send %string"
+//% weight=45 blockGap=8 
+//% name.fieldEditor="gridpicker"
+//% name.fieldOptions.width=220
+//% name.fieldOptions.columns=4
+void send(String a)
+{ 
+  uint8_t intSend = 0;
+  // put in standby mode
+  idle();
+
+  if (implicitHeader) {
+    implicitHeaderMode();
+  } else {
+    explicitHeaderMode();
+  }
+
+  // reset FIFO address and paload length
+  writeRegister(REG_FIFO_ADDR_PTR, 0);
+  writeRegister(REG_PAYLOAD_LENGTH, 0);
+
+  if( a->data[0]  ==  0)return;
+  for(int i=0; i<254 ;i++){
+    intSend =  a->data[i];
+    if(intSend  ==  0 && i == 0)return;
+    if(intSend  ==  0)break;
+    writeRaw(&intSend,1);
+  }
+    // put in TX mode
+  writeRegister(REG_OP_MODE, MODE_LONG_RANGE_MODE | MODE_TX);
+
+  // wait for TX done
+  while ((readRegister(REG_IRQ_FLAGS) & IRQ_TX_DONE_MASK) == 0) {
+    //TO DO: yield();
+    fiber_sleep(10);
+  }
+
+  // clear IRQ's
+  writeRegister(REG_IRQ_FLAGS, IRQ_TX_DONE_MASK);
+  return;
+}
+
+
+void writeRaw(const uint8_t *buffer, int size)
 {
   int currentLength = readRegister(REG_PAYLOAD_LENGTH);
 
