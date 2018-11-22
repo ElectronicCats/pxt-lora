@@ -48,7 +48,7 @@ declare namespace lora {
      **/
     //% parts="lora"
     //% weight=45 blockGap=8 blockId="Send" block="Send %string" shim=lora::send
-    function send(a: string): uint8;
+    function send(a: string): void;
 
     /**
      * Available Packet
