@@ -2,7 +2,7 @@
 
 # LoRa
 
-Package adds support LoRa **(Status: alpha 2)**
+Package adds support LoRa **(Status: Beta)**
 
 WARNING: Current version works with [codal circuit playground](https://github.com/ElectronicCats/codal-circuit-playground/releases/tag/v1.5.4-mixer) v1.5.4-mixer 
 
@@ -20,7 +20,7 @@ npm install -g pxt
 In a common folder,
 
 * clone https://github.com/Microsoft/pxt to ``pxt`` folder
-* clone https://github.com/ElectronicCats/pxt-common-packages **branch lora.2** to ``pxt-common-packages`` folder
+* clone https://github.com/ElectronicCats/pxt-common-packages
 * clone https://github.com/ElectronicCats/pxt-maker **branch MKR-with-lora** to ``pxt-maker`` folder
 * go to ``pxt`` and run
 
@@ -36,7 +36,7 @@ npm install
 npm link ../pxt
 ```
 
-* go to ``pxt-adafruit`` and run
+* go to ``pxt-maker `` and run
 
 ```
 npm install
@@ -49,7 +49,7 @@ npm link ../pxt-common-packages
 From root github folder,
 
 ```
-cd pxt-adafruit
+cd pxt-maker
 pxt serve
 ```
 
