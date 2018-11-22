@@ -6,7 +6,7 @@ Package adds support LoRa **(Status: Beta)**
 
 WARNING: Current version works with [codal circuit playground](https://github.com/ElectronicCats/codal-circuit-playground/releases/tag/v1.5.4-mixer) v1.5.4-mixer 
 
-## Current way of installation for alpha version
+## Current way of installation for beta version
 
 This setup is needed if you plan to make changes in PXT itself. In most cases, it's a bit of an overkill
 if you are building a package for the Adafruit editor.
@@ -52,6 +52,14 @@ From root github folder,
 cd pxt-maker
 pxt serve
 ```
+## Intall extension
+
+Go menu -> Advanced -> Extensions and copy the next link
+
+```
+https://github.com/ElectronicCats/pxt-lora
+```
+press enter select packages in menu
 
 ## Usage
 
