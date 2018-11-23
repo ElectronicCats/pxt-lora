@@ -40,14 +40,19 @@ declare namespace lora {
      * Write Packet to send
      **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="write" block="Write Packet %int" shim=lora::write
+    //% blockId="write" block="Write Packet %int" 
+    //% weight=45 blockGap=8 block="Write Packet %int" shim=lora::write
     function write(byte: uint8): void;
 
     /**
      * Write Packet to send
      **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="Send" block="Send %string" shim=lora::send
+    //% blockId="Send" block="Send %string"
+    //% weight=45 blockGap=8 
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=lora::send
     function send(a: string): void;
 
     /**
