@@ -428,7 +428,7 @@ void write(uint8_t byte)
 }
 
 /**
-* Write Packet to send
+* Send an string
 **/
 //% parts="lora"
 //% blockId="Send" block="Send %string"
@@ -490,8 +490,6 @@ void writeRaw(const uint8_t *buffer, int size)
 
   // update length
   writeRegister(REG_PAYLOAD_LENGTH, currentLength + size);
-
-  //return size;
 }
 
 /**
@@ -543,6 +541,7 @@ int peek()
 
 void flush()
 {
+  //TODO
 }
 
 void idle()
