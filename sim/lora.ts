@@ -23,4 +23,7 @@ namespace pxsim.lora {
     export function send(): void { 
 
     }
+    export function write(): void { 
+
+    }
 }
