@@ -273,8 +273,6 @@ void implicitHeaderMode()
 /**
 * Begin Packet to send
 **/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="beginPacket" block="beginPacket"
 int beginPacket()
 {
   // put in standby mode
@@ -306,8 +304,6 @@ int readVersion()
 /**
 * End Packet to send
 **/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="endPacket" block="endPacket"
 int endPacket()
 {
   // put in TX mode

@@ -2,25 +2,11 @@
 declare namespace lora {
 
     /**
-     * Begin Packet to send
-     **/
-    //% parts="lora"
-    //% weight=45 blockGap=8 blockId="beginPacket" block="beginPacket" shim=lora::beginPacket
-    function beginPacket(): int32;
-
-    /**
      * Read Version
      **/
     //% parts="lora"
     //% weight=45 blockGap=8 blockId="readVersion" block="readVersion" shim=lora::readVersion
     function readVersion(): int32;
-
-    /**
-     * End Packet to send
-     **/
-    //% parts="lora"
-    //% weight=45 blockGap=8 blockId="endPacket" block="endPacket" shim=lora::endPacket
-    function endPacket(): int32;
 
     /**
      * Parse Packet to send
