@@ -25,7 +25,7 @@ npm install -g pxt
 In a common folder,
 
 * clone https://github.com/Microsoft/pxt to ``pxt`` folder
-* clone https://github.com/ElectronicCats/pxt-common-packages
+* clone https://github.com/ElectronicCats/pxt-common-packages with-lora** to ``add-lora-support`` folder
 * clone https://github.com/ElectronicCats/pxt-maker **branch MKR-with-lora** to ``pxt-maker`` folder
 * go to ``pxt`` and run
 
