@@ -1,4 +1,4 @@
-// Copyright (c) Andres Sabas. All rights reserved.
+// Copyright (c) Electronic Cats. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 // Based in the work of Sandeep Mistry, thanks https://github.com/sandeepmistry/arduino-LoRa
 
