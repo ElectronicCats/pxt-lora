@@ -114,7 +114,7 @@ namespace lora {
 
   void write(int byte);
   void writeRaw(const uint8_t *buffer, int size);
-  void Send(String a);
+  void send(String a);
 
   uint8_t readRegister(uint8_t address);
   void writeRegister(uint8_t address, uint8_t value);
