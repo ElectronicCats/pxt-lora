@@ -17,7 +17,7 @@ namespace lora {
     * Read Version of chip
     **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="readVersion" block="read version" 
+    //% weight=45 blockGap=8 blockId="readVersion" block="lora|read version"
     //% shim=lora::readVersion
     export function readVersion(): number {
         return 0;
@@ -26,7 +26,7 @@ namespace lora {
     * Parse Packet to send
     **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="parsePacket" block="parse packet %size" 
+    //% weight=45 blockGap=8 blockId="parsePacket" block="lora|parse packet %size"
     //% shim=lora::parsePacket
     export function parsePacket(size: number): number {
         return 0;
@@ -35,7 +35,7 @@ namespace lora {
     * Packet RSSI
     **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="packetRssi" block="packet RSSI" 
+    //% weight=45 blockGap=8 blockId="packetRssi" block="lora|packet RSSI"
     //% shim=lora::packetRssi
     export function packetRssi(): number {
         return 0;
@@ -48,7 +48,7 @@ namespace lora {
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4
-    //% blockId="send" block="send string %text" 
+    //% blockId="send" block="lora|send string %text"
     //% shim=lora::send
     export function send(text: string): void {
         return;
@@ -58,7 +58,7 @@ namespace lora {
     * Available Packet
     **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="available" block="available" 
+    //% weight=45 blockGap=8 blockId="available" block="lora|available"
     //% shim=lora::available
     export function available(): number {
         return 0
@@ -67,7 +67,7 @@ namespace lora {
     * Read Packet
     **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="read" block="read" 
+    //% weight=45 blockGap=8 blockId="read" block="lora|read"
     //% shim=lora::read
     export function read(): number {
         return 0
