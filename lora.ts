@@ -47,7 +47,7 @@ namespace lora{
     //% name.fieldOptions.columns=4
     //% blockId="send" block="Send %text" shim=lora::send
     export function send(text: string): void { 
-
+      return
     }
 
     /**
