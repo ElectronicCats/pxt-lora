@@ -2,7 +2,7 @@
 * Andrés Sabas @ The Inventor's House and Electronic Cats
 * https://github.com/sabas1080
 * August 4, 2018
-* https://github.com/
+* https://github.com/ElectronicCats/pxt-lora
 * Development environment specifics:
 * Written in Microsoft PXT
 * Tested with Arduino MKR1300
