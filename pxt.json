@@ -4,10 +4,10 @@
     "description": "Library for Lora",
     "license": "MIT",
     "files": [
-      "README.md",
-      "lora.cpp",
-      "shims.d.ts",
-      "lora.ts"
+        "README.md",
+        "lora.cpp",
+        "lora.ts",
+        "shims.d.ts"
     ],
     "testFiles": [
         "test.ts"

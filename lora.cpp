@@ -4,7 +4,8 @@
 
 #include "pxt.h"
 #include "SPI.h"
-#include "MbedSPI.h"
+// already included by platform
+// #include "MbedSPI.h"
 #include <string>
 #include <stdlib.h> 
 
@@ -223,9 +224,7 @@ class WLora{
   
 SINGLETON(WLora);
 
-/*
-* Write Register of SX. 
-*/
+// Write Register of SX. 
 void writeRegister(uint8_t address, uint8_t value)
 {
   
@@ -239,9 +238,7 @@ void writeRegister(uint8_t address, uint8_t value)
 
 }
 
-/*
-* Read register of SX 
-*/
+// Read register of SX 
 uint8_t readRegister(uint8_t address)
 {
   uint8_t response;
@@ -270,9 +267,7 @@ void implicitHeaderMode()
   writeRegister(REG_MODEM_CONFIG_1, readRegister(REG_MODEM_CONFIG_1) | 0x01);
 }
 
-/**
-* Begin Packet to send
-**/
+// Begin Packet to send
 int beginPacket()
 {
   // put in standby mode
@@ -291,15 +286,12 @@ int beginPacket()
   return 1;
 }
 
-//%
+//% 
 int readVersion()
 {
   return readRegister(0x42);
 }
 
-/**
-* End Packet to send
-**/
 int endPacket()
 {
   // put in TX mode
@@ -369,17 +361,13 @@ int packetRssi()
   return (readRegister(REG_PKT_RSSI_VALUE) - (frequency < 868E6 ? 164 : 157));
 }
 
-/**
-* Packet SNR
-**/
+// Packet SNR
 float packetSnr()
 {
   return ((int8_t)readRegister(REG_PKT_SNR_VALUE)) * 0.25;
 }
 
-/**
-* Begin Packet Frecuency Error
-**/
+// Begin Packet Frecuency Error
 long packetFrequencyError()
 {
   int32_t freqError = 0;
@@ -400,9 +388,7 @@ long packetFrequencyError()
 }
 
 
-/**
-* Write Packet to send
-**/
+// Write Packet to send
 void write(uint8_t byte)
 {
   writeRaw(&byte, sizeof(byte));
