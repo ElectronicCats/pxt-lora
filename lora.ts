@@ -14,7 +14,7 @@
 */
 namespace lora {
     /**
-    * Read Version
+    * Read Version of chip
     **/
     //% parts="lora"
     //% weight=45 blockGap=8 blockId="readVersion" block="readVersion" 
