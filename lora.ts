@@ -41,14 +41,15 @@ namespace lora{
     /**
      * Write Packet to send
      **/
-    //% blockId="Send" block="Send %string"
     //% weight=45 blockGap=8 
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=lora::send
-    export function send(): void { 
+    //% name.fieldOptions.columns=4
+    //% blockId="send" block="Send %text" shim=lora::send
+    export function send(text: string): void { 
 
     }
+
     /**
     * Available Packet
     **/
