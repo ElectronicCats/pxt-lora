@@ -6,12 +6,32 @@ Package adds support LoRa
 
 ## Install extension
 
-Go menu -> Advanced -> Extensions and copy the next link
+Enter to [Maker MakeCode](https://maker.makecode.com/#)
+
+1.- Select "New Project"
+
+
+2.- Select MKR1300 Arduino board
+![boards2](
+https://raw.githubusercontent.com/wiki/ElectronicCats/CatSatZero/assets/MakeCode_6.png)
+
+3.- Go menu -> Advanced -> Extensions and copy the next link
 
 ```
 https://github.com/ElectronicCats/pxt-lora
 ```
 press enter select packages in menu
+
+![paquetes2](
+https://raw.githubusercontent.com/wiki/ElectronicCats/CatSatZero/assets/MakeCode_2.png)
+
+
+![paquetes3](
+https://raw.githubusercontent.com/wiki/ElectronicCats/CatSatZero/assets/MakeCode_3.png)
+
+![paquetes4](
+https://raw.githubusercontent.com/wiki/ElectronicCats/CatSatZero/assets/MakeCode_4.png)
+
 
 ## Usage
 
