@@ -22,19 +22,55 @@ An library for sending and receiving data using [LoRa](https://www.semtech.com/t
 ## API
 
 
-- `function send():` Write Packet to send. Each packet can contain up to 255 bytes.
+### send
 
-- `function readVersion():` Read Version of chip.
+Write Packet to send. Each packet can contain up to 255 bytes.
 
-- `function available():` Returns number of bytes available for reading.
+```block
+lora.send("Hello")
+```
 
-- `function read():` Read the next byte from the packet.
+### readVersion
+Read Version of chip.
 
-- `function packetRssi():` Returns the RSSI of the received packet. 
+```block
+let version = lora.readVersion()
+```
 
-- `function parsePacket:` Check if a packet has been received.  
+### available()
+Returns number of bytes available for reading.
 
-### Pins Used 
+```block
+let data = 0
+forever(function () {
+    if (lora.available() < 0) {
+        data = lora.read()
+    }
+})
+```
+
+### read 
+Read the next byte from the packet.
+
+```block
+let data = lora.read()
+```
+
+### packetRssi() 
+Returns the RSSI of the received packet. 
+
+```block
+rssi = lora.packetRssi()
+```
+
+### parsePacket 
+Check if a packet has been received.  
+
+```block
+rssi = lora.parsePacket(0)
+```
+
+## Pins Used 
 
 The following pins are used for LoRa:  
 
