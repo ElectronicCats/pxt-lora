@@ -4,7 +4,7 @@
 
 Package adds support LoRa
 
-## Intall extension
+## Install extension
 
 Go menu -> Advanced -> Extensions and copy the next link
 
@@ -15,9 +15,9 @@ press enter select packages in menu
 
 ## Usage
 
-The package adds support for the **LoRa** of MKR1300.
+The package adds support **LoRa** for [Arduino MKR1300](https://store.arduino.cc/usa/mkr-wan-1300).
  
-* An library for sending and receiving data using [LoRa](https://www.semtech.com/technology/lora) radios.
+An library for sending and receiving data using [LoRa](https://www.semtech.com/technology/lora) radios.
 
 ## API
 
