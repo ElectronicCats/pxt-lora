@@ -291,9 +291,6 @@ int beginPacket()
   return 1;
 }
 
-/**
-* Read Version
-**/
 //%
 int readVersion()
 {
@@ -320,9 +317,6 @@ int endPacket()
   return 1;
 }
 
-/**
-* Parse Packet to send
-**/
 //%
 int parsePacket(int size)
 {
@@ -369,9 +363,6 @@ int parsePacket(int size)
   return packetLength;
 }
 
-/**
-* Packet RSSI
-**/
 //%
 int packetRssi()
 {
@@ -417,9 +408,6 @@ void write(uint8_t byte)
   writeRaw(&byte, sizeof(byte));
 }
 
-/**
-* Send an string
-**/
 //%
 void send(String a)
 { 
@@ -458,7 +446,6 @@ void send(String a)
   return;
 }
 
-
 void writeRaw(const uint8_t *buffer, int size)
 {
   int currentLength = readRegister(REG_PAYLOAD_LENGTH);
@@ -477,18 +464,12 @@ void writeRaw(const uint8_t *buffer, int size)
   writeRegister(REG_PAYLOAD_LENGTH, currentLength + size);
 }
 
-/**
-* Available Packet
-**/
 //%
 int available()
 {
   return (readRegister(REG_RX_NB_BYTES) - _packetIndex);
 }
 
-/**
-* Read Packet
-**/
 //%
 int read()
 {
