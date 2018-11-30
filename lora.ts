@@ -26,9 +26,9 @@ namespace lora {
     * Parse Packet to send
     **/
     //% parts="lora"
-    //% weight=45 blockGap=8 blockId="parsePacket" block="parsePacket" 
+    //% weight=45 blockGap=8 blockId="parsePacket" block="parsePacket %size" 
     //% shim=lora::parsePacket
-    export function parsePacket(): number {
+    export function parsePacket(size: number): number {
         return 0;
     }
     /**
