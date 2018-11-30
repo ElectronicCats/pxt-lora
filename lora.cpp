@@ -291,11 +291,7 @@ int beginPacket()
   return 1;
 }
 
-/**
-* Read Version
-**/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="readVersion" block="readVersion"
+//%
 int readVersion()
 {
   return readRegister(0x42);
@@ -321,11 +317,7 @@ int endPacket()
   return 1;
 }
 
-/**
-* Parse Packet to send
-**/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="parsePacket" block="parsePacket"
+//%
 int parsePacket(int size)
 {
   int packetLength = 0;
@@ -371,11 +363,7 @@ int parsePacket(int size)
   return packetLength;
 }
 
-/**
-* Packet RSSI
-**/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="packetRssi" block="packetRssi"
+//%
 int packetRssi()
 {
   return (readRegister(REG_PKT_RSSI_VALUE) - (frequency < 868E6 ? 164 : 157));
@@ -415,23 +403,12 @@ long packetFrequencyError()
 /**
 * Write Packet to send
 **/
-//% parts="lora"
-//% blockId="write" block="Write Packet %int" 
-//% weight=45 blockGap=8 block="Write Packet %int"
 void write(uint8_t byte)
 {
   writeRaw(&byte, sizeof(byte));
 }
 
-/**
-* Send an string
-**/
-//% parts="lora"
-//% blockId="Send" block="Send %string"
-//% weight=45 blockGap=8 
-//% name.fieldEditor="gridpicker"
-//% name.fieldOptions.width=220
-//% name.fieldOptions.columns=4
+//%
 void send(String a)
 { 
   uint8_t intSend = 0;
@@ -469,7 +446,6 @@ void send(String a)
   return;
 }
 
-
 void writeRaw(const uint8_t *buffer, int size)
 {
   int currentLength = readRegister(REG_PAYLOAD_LENGTH);
@@ -488,21 +464,13 @@ void writeRaw(const uint8_t *buffer, int size)
   writeRegister(REG_PAYLOAD_LENGTH, currentLength + size);
 }
 
-/**
-* Available Packet
-**/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="available" block="available"
+//%
 int available()
 {
   return (readRegister(REG_RX_NB_BYTES) - _packetIndex);
 }
 
-/**
-* Read Packet
-**/
-//% parts="lora"
-//% weight=45 blockGap=8 blockId="read" block="read"
+//%
 int read()
 {
   if (!available()) {
