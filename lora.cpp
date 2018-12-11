@@ -4,8 +4,6 @@
 
 #include "pxt.h"
 #include "SPI.h"
-// already included by platform
-// #include "MbedSPI.h"
 #include <string>
 #include <stdlib.h> 
 
