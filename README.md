@@ -4,6 +4,11 @@
 
 Package adds support LoRa
 
+## Compatible Hardware
+ * [Arduino MKR WAN 1300](https://store.arduino.cc/usa/mkr-wan-1300)
+
+NOTE: Requires firmware v1.1.6 or later on the on-board Murata module. Please use the MKRWANFWUpdate_standalone example from latest MKRWAN library release to update the firmware.
+
 ## Install extension
 
 Enter to [Maker MakeCode](https://maker.makecode.com/#)
