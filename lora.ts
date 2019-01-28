@@ -139,7 +139,7 @@ namespace lora {
 
         return 1;
     }
-    
+
     /**
     * Parse Packet to send
     **/
@@ -249,11 +249,11 @@ namespace lora {
         writeRegister(REG_PAYLOAD_LENGTH, 0);
 
         if (a -> data[0] == 0) return;
-        for (int i = 0; i < 254 ; i++) {
+        for (let i = 0; i < 254 ; i++) {
             intSend = a -> data[i];
             if (intSend == 0 && i == 0) return;
             if (intSend == 0) break;
-            writeRaw(& intSend, 1);
+            writeRaw(intSend, 1);
         }
 
         // put in TX mode
@@ -265,7 +265,7 @@ namespace lora {
             loops.pause(10)
         }
 
-        function writeRaw( * buffer: number, size: number) {
+        function writeRaw(data: Buffer, size: number) {
             let currentLength = readRegister(REG_PAYLOAD_LENGTH);
 
             // check size
@@ -275,7 +275,7 @@ namespace lora {
 
             // write data
             for (let i = 0; i < size; i++) {
-                writeRegister(REG_FIFO, buffer[i]);
+                writeRegister(REG_FIFO, data[i]);
             }
 
             // update length
@@ -474,7 +474,7 @@ namespace lora {
         writeRegister(REG_MODEM_CONFIG_3, config3);
     }
 
-    function setCodingRate4(int denominator) {
+    function setCodingRate4(denominator :  number) {
         if (denominator < 5) {
             denominator = 5;
         } else if (denominator > 8) {
