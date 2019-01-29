@@ -410,7 +410,7 @@ void send(String a)
   writeRegister(REG_PAYLOAD_LENGTH, 0);
 
   if( a->charCodeAt(0) ==  0)return;
-  for(int i=0; i<254 ;i++){
+  for(int i=0; i < a->getLength() ;i++){
     intSend =  a->getUTF8Data()[i];
     if(intSend  ==  0 && i == 0)return;
     if(intSend  ==  0)break;
