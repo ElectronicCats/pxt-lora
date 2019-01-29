@@ -1,6 +1,6 @@
 {
     "name": "lora",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Library for Lora",
     "license": "MIT",
     "files": [
