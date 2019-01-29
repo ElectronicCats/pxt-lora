@@ -414,6 +414,7 @@ void send(String a)
   auto ab = a->getUTF8Data();
   for(int i=0; i < an ;i++){
     intSend =  ab[i];
+    writeRaw(&intSend,1);
    }
 
 
