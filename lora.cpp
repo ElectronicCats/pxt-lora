@@ -408,16 +408,14 @@ void send(String a)
   // reset FIFO address and paload length
   writeRegister(REG_FIFO_ADDR_PTR, 0);
   writeRegister(REG_PAYLOAD_LENGTH, 0);
+  
+  // if( a->charCodeAt(0) ==  0)return;
+  auto an = a->getUTF8Size();
+  auto ab = a->getUTF8Data();
+  for(int i=0; i < an ;i++){
+    intSend =  ab[i];
+   }
 
-  if( a->charCodeAt(0) ==  0)return;
-  for(int i=0; i < a->getLength() ;i++){
-    intSend =  a->getUTF8Data()[i];
-    if(intSend  ==  0 && i == 0)return;
-    if(intSend  ==  0)break;
-    writeRaw(&intSend,1);
-  }
-    // put in TX mode
-  writeRegister(REG_OP_MODE, MODE_LONG_RANGE_MODE | MODE_TX);
 
   // wait for TX done
   while ((readRegister(REG_IRQ_FLAGS) & IRQ_TX_DONE_MASK) == 0) {
