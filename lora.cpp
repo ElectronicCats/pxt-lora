@@ -409,9 +409,9 @@ void send(String a)
   writeRegister(REG_FIFO_ADDR_PTR, 0);
   writeRegister(REG_PAYLOAD_LENGTH, 0);
 
-  if( a->ascii.data[0]  ==  0)return;
+  if( a->getUTF8Data()[0]  ==  0)return;
   for(int i=0; i<254 ;i++){
-    intSend =  a->ascii.data[i];
+    intSend =  a->getUTF8Data()[i];
     if(intSend  ==  0 && i == 0)return;
     if(intSend  ==  0)break;
     writeRaw(&intSend,1);
