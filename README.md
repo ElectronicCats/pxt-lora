@@ -44,6 +44,13 @@ The package adds support **LoRa** for [Arduino MKR1300](https://store.arduino.cc
  
 An library for sending and receiving data using [LoRa](https://www.semtech.com/technology/lora) radios.
 
+## Testing receive
+
+Install arduino-lora library in arduino, and upload firmware to arduino mkr1300 for receiver data
+https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaReceiver/LoRaReceiver.ino
+
+Open monitor serial and wait data
+
 ## API
 
 
