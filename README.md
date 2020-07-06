@@ -1,3 +1,7 @@
+<a href="https://electroniccats.com/store/">
+  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" height="104" />
+</a>
+
 [![Build Status](https://travis-ci.org/ElectronicCats/pxt-lora.svg?branch=master)](https://travis-ci.org/ElectronicCats/pxt-lora) 
 
 # LoRa
