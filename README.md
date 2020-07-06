@@ -1,5 +1,5 @@
-<a href="https://electroniccats.com/store/">
-  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" height="104" />
+<a href="https://github.com/sponsors/ElectronicCats">
+  <img src="https://electroniccats.com/wp-content/uploads/2020/07/Badge_GHS.png" height="104" />
 </a>
 
 [![Build Status](https://travis-ci.org/ElectronicCats/pxt-lora.svg?branch=master)](https://travis-ci.org/ElectronicCats/pxt-lora) 
